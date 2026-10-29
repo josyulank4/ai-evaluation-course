@@ -16,6 +16,28 @@ tools do, then map each piece to the real platforms.
 - Python 3.11+
 - No third-party packages (`requirements.txt` is intentionally empty)
 
+## Per-lesson checkpoints (hands-on format)
+
+The course's hands-on lessons follow the founder's Hands-On Format Rule: the code is written on screen step by step, the real run — output, logs, and failures before fixes — is shown, the narration explains each step and why, and this repo is shared with per-lesson checkpoints. For every DEMO lesson there are two git tags:
+
+- `lXX-start` — the repo state before the lesson's package is written: check this out to follow the lesson from the same starting point as the video.
+- `lXX-finish` — the exact code as it runs at the end of the lesson video: check this out to compare against your own work. `python3 validate.py` passes at every `*-finish` tag.
+
+| Lesson | Package | Start tag | Finish tag |
+|---|---|---|---|
+| L9 Build Your First Golden Set and Scoring Harness | evalkit | `l09-start` | `l09-finish` |
+| L18 Build a Calibrated LLM Judge | graders | `l18-start` | `l18-finish` |
+| L22 Agreement and Significance on Real Scores | stats4eval | `l22-start` | `l22-finish` |
+| L26 Detect Drift Before Your Users Do | driftwatch | `l26-start` | `l26-finish` |
+| L30 Calibrate Raters and Adjudicate Disagreements | humaneval | `l30-start` | `l30-finish` |
+| L34 Build a Guardrail Pipeline That Logs Every Decision | guardrails | `l34-start` | `l34-finish` |
+| L38 Run a Red-Team Session Against Your Own System | redteam | `l38-start` | `l38-finish` |
+| L42 Sample Production Traffic and Evaluate It Live | onlineeval | `l42-start` | `l42-finish` |
+| L46 Wire the Evaluation Gate Into Your Release Pipeline | gatekeeper | `l46-start` | `l46-finish` |
+| L50 The Production Readiness Review, Run End to End | readiness | `l50-start` | `l50-finish` |
+
+Tags are created as each DEMO lesson is produced (build first, make it pass, then record the replay — nothing is narrated that was not executed). The design state of the repo carries the full package set; the tags mark the per-lesson journey through it.
+
 ## How to run each demo
 
 Run from the repo root:
